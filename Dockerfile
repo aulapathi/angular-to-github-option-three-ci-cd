@@ -13,7 +13,7 @@ RUN npm run build -- --configuration production
 # ---------- Stage 2: Serve with Nginx ----------
 FROM nginx:alpine
 
-COPY --from=build /app/dist/github-option-three-app /usr/share/nginx/html
+COPY --from=build github-option-three-app/dist/github-option-three-app /usr/share/nginx/html
 
 EXPOSE 80
 
